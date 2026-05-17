@@ -2,9 +2,6 @@
 
 Tema 39568_9. Analizador e intérprete para un sub-lenguaje de C, implementado con ANTLR4 y Node.js.
 
-<img width="942" height="793" alt="image" src="https://github.com/user-attachments/assets/7add0773-8bef-4473-87ae-ee4979b4920a" />
-
-
 ## Características de la Gramática
 
 Este analizador procesa un sub-conjunto reducido del lenguaje C con las siguientes reglas:
@@ -37,51 +34,75 @@ Estas instrucciones se pueden ejecutar en cualquiera de los siguientes entornos 
 
 **Pasos:**
 
-1. Primero clonamos el repositorio en tu entorno local:
-   ```bash
-   git clone [https://github.com/TU_USUARIO_DE_GITHUB/52050.git](https://github.com/TU_USUARIO_DE_GITHUB/52050.git)
+1. Primero clonamos el repositorio dentro de una carpeta cualquiera (en el caso del ejemplo una llamada "PruebaClon"):
 
-2. Después nos dirigimos al directorio del proyecto y abrimos Visual Studio Code:
-   cd 52050
-   code .
-4. Abrimos la terminal integrada de VS Code (Terminal > Nuevo terminal), ingresamos a la carpeta del analizador e instalamos las dependencias necesarias:
- cd analizador
- npm install
- (foto: captura de la terminal ejecutando npm install)
+    git clone https://github.com/EloisaMorales/52050.git
 
-Uso Básico
-El proyecto incluye cuatro archivos de prueba en la raíz (prueba_correcta_1.txt, prueba_correcta_2.txt, prueba_incorrecta_1.txt, prueba_incorrecta_2.txt).
+2. Después nos dirigimos al directorio del proyecto:
 
-Para ejecutar el analizador, asegurate de estar dentro de la carpeta analizador en tu terminal y ejecutá Node pasándole la ruta del archivo que querés leer:
- node index.js ../prueba_correcta_1.txt
- (foto: captura de la ejecución del comando)
+     cd 52050
 
-El programa mostrará secuencialmente:
+3. Y por ultimo abrimos el visual studio para trabajar con el comando:
 
-Análisis léxico y sintáctico: Verificación de la estructura del código. Si hay errores, mostrará la línea y la causa.
+    code .
 
-Tabla de lexemas-tokens: Un listado tabular con cada lexema reconocido y su respectivo token (ej. if -> IF).
+   <img width="961" height="242" alt="image" src="https://github.com/user-attachments/assets/bf267376-a93b-4484-b8bc-38562f5ebb9e" />
 
-Árbol de análisis sintáctico: Representación en formato de texto (CST) de la estructura jerárquica del código.
+   <img width="477" height="40" alt="image" src="https://github.com/user-attachments/assets/aee4540e-f3a6-4e85-b92b-e5cb9bdc046a" />
 
-Interpretación: La traducción literal del código al lenguaje JavaScript y su ejecución nativa mostrando el resultado final.
+Ahora deberia estar adentro de visual studio con el proyecto abierto
 
-(foto: captura grande mostrando toda la salida exitosa en la consola)
+<img width="1913" height="1017" alt="image" src="https://github.com/user-attachments/assets/ad34b59f-4266-4f06-a679-5b1f02425f51" />
 
-Ejemplos de Prueba
-Códigos Válidos (Correctos)
 
-Ejemplo 1 (Condición Verdadera):
-if (1) {
-    printf("El analisis fue exitoso!");
-    return;
-} else {
-    printf("Hubo un error.");
-    return;
-}
-Comentarios Finales
-Este proyecto fue desarrollado como evaluación formativa para la materia de Sintaxis y Semántica de los Lenguajes por el alumno Valentin (Legajo: 52050).
+## Uso Básico
+El proyecto incluye cuatro archivos de prueba en la raíz principal (prueba_correcta_1.txt, prueba_correcta_2.txt, prueba_incorrecta_1.txt, prueba_incorrecta_2.txt).
 
-El repositorio contiene todos los archivos fuente de la gramática .g4, los analizadores generados por ANTLR, el código del intérprete en JavaScript y los archivos de prueba requeridos para evaluar la correcta funcionalidad del sistema.
+Para ejecutar el analizador, asegurate de estar dentro de la carpeta analizador en tu terminal (Ir a **Terminal > Nuevo terminal** en la barra superior) y ejecutá "node index.js ../" pasándole la ruta del archivo que querés leer (por ejemplo prueba_correcta_1.txt):
+
+<img width="1098" height="101" alt="image" src="https://github.com/user-attachments/assets/6244991e-6d94-4e90-85a2-738978ae561b" />
+
+El programa mostrará:
+
+1.Análisis léxico y sintáctico: Verificación de la estructura del código. Si hay errores, mostrará la línea y la causa.
+
+2.Tabla de lexemas-tokens: Un listado tabular con cada lexema reconocido y su respectivo token (ej. if -> IF).
+
+3.Árbol de análisis sintáctico: Representación en formato de texto (CST) de la estructura jerárquica del código.
+
+4.Interpretación: La traducción literal del código al lenguaje JavaScript y su ejecución nativa mostrando el resultado final.
+
+Ejemplo de como debería salir:
+
+<img width="525" height="693" alt="image" src="https://github.com/user-attachments/assets/b3b452e5-2be6-4910-894e-b6e88d0210db" />
+
+<img width="1462" height="446" alt="image" src="https://github.com/user-attachments/assets/5a90c210-3916-4190-8080-f8b2bfdcca82" />
+
+
+Puedes probar otros códigos correctos como:
+
+prueba_correcta_2.txt
+
+<img width="408" height="206" alt="image" src="https://github.com/user-attachments/assets/a976e9ed-fec1-4473-80c9-5d900f0088ff" />
+
+------------------------------------
+
+O incorrectos como: 
+
+prueba_incorrecta_1.txt ((Falta de paréntesis de apertura))
+
+<img width="417" height="132" alt="image" src="https://github.com/user-attachments/assets/7a3a565e-83e3-40be-b839-ee2cd8a7d47e" />
+
+---------------------------------
+
+prueba_incorrecta_2.txt (Falta de punto y coma)
+
+<img width="428" height="131" alt="image" src="https://github.com/user-attachments/assets/68a35b8f-e836-4840-b5ef-5e0990e4f631" />
+
+## Comentarios Finales
+
+Este proyecto fue desarrollado para la materia de Sintaxis y Semántica de los Lenguajes por la alumna Eloisa Morales (legajo 52050)
+
+El repositorio contiene los archivos necesarios para compilar y ejecutar el proyecto, junto con pasos que nos permiten la correcta ejeccucion del mismo.
 
 Gracias por su tiempo.

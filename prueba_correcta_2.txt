@@ -1,0 +1,7 @@
+if (0) {
+    printf("No entra aca.");
+    return;
+} else {
+    printf("Prueba dos exitosa!");
+    return;
+}

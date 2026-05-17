@@ -1,0 +1,7 @@
+if (1) {
+    printf("El analisis fue exitoso!");
+    return;
+} else {
+    printf("Hubo un error.");
+    return;
+}

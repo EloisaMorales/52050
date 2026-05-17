@@ -2,7 +2,8 @@
 
 Tema 39568_9. Analizador e intérprete para un sub-lenguaje de C, implementado con ANTLR4 y Node.js.
 
-*(foto: podés poner acá una captura de tu código corriendo en la terminal)*
+<img width="942" height="793" alt="image" src="https://github.com/user-attachments/assets/7add0773-8bef-4473-87ae-ee4979b4920a" />
+
 
 ## Características de la Gramática
 

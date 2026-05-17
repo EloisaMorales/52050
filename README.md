@@ -40,12 +40,11 @@ Estas instrucciones se pueden ejecutar en cualquiera de los siguientes entornos 
 1. Primero clonamos el repositorio en tu entorno local:
    ```bash
    git clone [https://github.com/TU_USUARIO_DE_GITHUB/52050.git](https://github.com/TU_USUARIO_DE_GITHUB/52050.git)
-   <img width="951" height="360" alt="image" src="https://github.com/user-attachments/assets/dc872232-5caf-4867-824d-8a324a64282c" />
 
 2. Después nos dirigimos al directorio del proyecto y abrimos Visual Studio Code:
- cd 52050
- code .
-3. Abrimos la terminal integrada de VS Code (Terminal > Nuevo terminal), ingresamos a la carpeta del analizador e instalamos las dependencias necesarias:
+   cd 52050
+   code .
+4. Abrimos la terminal integrada de VS Code (Terminal > Nuevo terminal), ingresamos a la carpeta del analizador e instalamos las dependencias necesarias:
  cd analizador
  npm install
  (foto: captura de la terminal ejecutando npm install)

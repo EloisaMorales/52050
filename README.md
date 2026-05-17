@@ -2,6 +2,9 @@
 
 Tema 39568_9. Analizador e intérprete para un sub-lenguaje de C, implementado con ANTLR4 y Node.js.
 
+<img width="942" height="796" alt="image" src="https://github.com/user-attachments/assets/5e74419b-98a7-40e9-aebb-2af08d4b4d3f" />
+
+
 ## Características de la Gramática
 
 Este analizador procesa un sub-conjunto reducido del lenguaje C con las siguientes reglas:
@@ -89,7 +92,7 @@ prueba_correcta_2.txt
 
 O incorrectos como: 
 
-prueba_incorrecta_1.txt ((Falta de paréntesis de apertura))
+prueba_incorrecta_1.txt (Falta de paréntesis de apertura)
 
 <img width="417" height="132" alt="image" src="https://github.com/user-attachments/assets/7a3a565e-83e3-40be-b839-ee2cd8a7d47e" />
 
